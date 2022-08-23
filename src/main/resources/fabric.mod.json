@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "dys",
+  "version": "${version}",
+
+  "name": "Dys Mod",
+  "description": "人类有三大欲望，分别是食欲，性欲，睡眠欲。",
+  "authors": [
+    "Asankilp"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "WTFPL",
+  "icon": "assets/dys/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.asankilp.dys.Dys"
+    ]
+  },
+  "mixins": [
+
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
