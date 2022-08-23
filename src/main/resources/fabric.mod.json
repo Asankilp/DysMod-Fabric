@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "Dys Mod",
-  "description": "人类有三大欲望，分别是食欲，性欲，睡眠欲。",
+  "description": "kusa",
   "authors": [
     "Asankilp"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://asankilp.github.io/",
+    "sources": "https://github.com/Asankilp/DysMod-Fabric"
   },
 
   "license": "WTFPL",
