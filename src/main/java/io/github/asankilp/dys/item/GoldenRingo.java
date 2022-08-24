@@ -49,18 +49,25 @@ public class GoldenRingo extends Item {
             }
             if (level == 0) {
                 levelIn.playSound((Player) null, entityIn.getX(), entityIn.getY(), entityIn.getZ(), SoundReg.gabaGoldSound.get(), SoundSource.AMBIENT, 0.5f, 1f);
+                entityIn.sendSystemMessage(Component.translatable("msg.golden_ringo.2"));
+
             }
             if (level >= 1) {
-                levelIn.playSound((Player) null, entityIn.getX(), entityIn.getY(), entityIn.getZ(), SoundReg.dededonSound.get(), SoundSource.AMBIENT, 0.5f, 1f);
                 entityIn.removeEffect(EffectReg.SENPAI.get());
                 entityIn.addEffect((new MobEffectInstance(MobEffects.DARKNESS, 114, 514, true, false)));
                 if (levelIn instanceof ServerLevel serverLevel) {
-                    SpawnUtil.trySpawnMob(EntityType.WARDEN, MobSpawnType.TRIGGERED, serverLevel, entityIn.blockPosition(), 20, 5, 6, SpawnUtil.Strategy.ON_TOP_OF_COLLIDER).isPresent();
+                    if (SpawnUtil.trySpawnMob(EntityType.WARDEN, MobSpawnType.TRIGGERED, serverLevel, entityIn.blockPosition(), 20, 5, 6, SpawnUtil.Strategy.ON_TOP_OF_COLLIDER).isPresent()) {
+                        entityIn.sendSystemMessage(Component.translatable("msg.golden_ringo.3"));
+                        levelIn.playSound((Player) null, entityIn.getX(), entityIn.getY(), entityIn.getZ(), SoundReg.dededonSound.get(), SoundSource.AMBIENT, 0.5f, 1f);
+                    } else {
+                        entityIn.sendSystemMessage(Component.translatable("msg.golden_ringo.3.1"));
+                    }
                 }
             }
         } else {
             entityIn.addEffect(new MobEffectInstance(EffectReg.SENPAI.get(), 1000, 0, true, true), entityIn);
             levelIn.playSound((Player) null, entityIn.getX(), entityIn.getY(), entityIn.getZ(), SoundReg.tokugawaShoutSound.get(), SoundSource.AMBIENT, 0.5f, 1f);
+            entityIn.sendSystemMessage(Component.translatable("msg.golden_ringo.1"));
         }
         return super.finishUsingItem(itemIn, levelIn, entityIn);
     }
