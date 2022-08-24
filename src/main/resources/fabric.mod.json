@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Dys Mod",
-  "description": "kusa",
+  "description": "\u4eba\u7c7b\u6709\u4e09\u5927\u6b32\u671b\uff0c\u98df\u6b32\uff0c\u6027\u6b32\uff0c\u7761\u7720\u6b32\u3002",
   "authors": [
     "Asankilp"
   ],
@@ -28,7 +28,7 @@
 
   "depends": {
     "fabricloader": ">=0.14.6",
-    "fabric": "*",
+    "fabric": ">=0.58.5+1.19.1",
     "minecraft": "~1.19",
     "java": ">=17"
   },
