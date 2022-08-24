@@ -11,7 +11,13 @@
   "item.dys.kurumi_shovel": "胡一铲",
   "item.kurumi_shovel.tip1": "§o胡桃所使用的铲子。",
   "item.kurumi_shovel.tip2": "§o对付亡灵的利器。",
+  "item.golden_ringo.tip1": "§o闪烁着金金金金金光的林檎。",
+  "item.golden_ringo.tip2": "§o吃§l三回啊三回§r§o这个林檎会发生奇妙的事情。",
   "item.dys.akaza_akari": "赤座灯里",
-  "subtitles.ambient.akaza_akari.akarin": "阿卡林~"
+  "item.dys.extreme_spear": "极霸矛",
+  "effect.dys.senpai_stare": "先辈凝视",
+  "subtitles.ambient.akaza_akari.akarin": "阿卡林~",
+  "subtitles.ambient.gaba.gold": "金金金金金金，钱钱钱钱钱钱",
+  "subtitles.ambient.dededon": "噔噔咚"
 
 }

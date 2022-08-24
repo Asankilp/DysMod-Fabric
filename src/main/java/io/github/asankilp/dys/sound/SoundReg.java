@@ -20,4 +20,10 @@ public class SoundReg {
             -> new SoundEvent(new ResourceLocation(Dys.MODID, "ambient.yaju.yarimasu")));
     public static final RegistryObject<SoundEvent> akariakarinSound = SOUNDS.register("ambient.akaza_akari.akarin", ()
             -> new SoundEvent(new ResourceLocation(Dys.MODID, "ambient.akaza_akari.akarin")));
+    public static final RegistryObject<SoundEvent> gabaGoldSound = SOUNDS.register("ambient.gaba.gold", ()
+            -> new SoundEvent(new ResourceLocation(Dys.MODID, "ambient.gaba.gold")));
+    public static final RegistryObject<SoundEvent> dededonSound = SOUNDS.register("ambient.dededon", ()
+            -> new SoundEvent(new ResourceLocation(Dys.MODID, "ambient.dededon")));
+
+
 }

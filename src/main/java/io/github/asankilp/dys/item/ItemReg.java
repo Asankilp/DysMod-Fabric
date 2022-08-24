@@ -24,4 +24,5 @@ public class ItemReg {
     public static final RegistryObject<Item> DEAD_IRON = ITEMS.register("dead_iron", DeadIron::new);
     public static final RegistryObject<Item> KURUMI_SHOVEL = ITEMS.register("kurumi_shovel", KurumiShovel::new);
     public static final RegistryObject<Item> AKAZA_AKARI = ITEMS.register("akaza_akari", AkazaAkari::new);
+    public static final RegistryObject<Item> EXTREME_SPEAR = ITEMS.register("extreme_spear", ExtremeSpear::new);
 }
