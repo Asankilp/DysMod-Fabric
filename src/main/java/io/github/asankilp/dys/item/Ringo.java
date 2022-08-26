@@ -13,14 +13,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 public class Ringo extends Item {
-    private static final FoodProperties ringo = (new FoodProperties.Builder())
+    private static final FoodProperties RINGO = (new FoodProperties.Builder())
             .saturationMod(1.2F)
             .nutrition(4)
             .effect((new MobEffectInstance(MobEffects.CONFUSION, 114, 514, true, false)), 1)
             .build();
 
     public Ringo() {
-        super(new Properties().food(ringo).tab(CreativeModeTab.TAB_FOOD));
+        super(new Properties().food(RINGO).tab(CreativeModeTab.TAB_FOOD));
     }
     @Override
     public ItemStack finishUsingItem(ItemStack itemIn, Level levelIn, LivingEntity entityIn) {

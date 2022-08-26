@@ -26,16 +26,16 @@ import java.util.List;
 import java.util.Objects;
 
 public class GoldenRingo extends Item {
-    private static final FoodProperties ringo = (new FoodProperties.Builder())
+    private static final FoodProperties GOLDEN_RINGO = (new FoodProperties.Builder())
             .saturationMod(1.2F)
             .nutrition(4)
             .effect((new MobEffectInstance(MobEffects.CONFUSION, 114, 514, true, false)), 1)
 //            .effect((new MobEffectInstance(MobEffects.DARKNESS, 114, 514, true, false)), 1)
-
+            .alwaysEat()
             .build();
 
     public GoldenRingo() {
-        super(new Properties().food(ringo).tab(CreativeModeTab.TAB_FOOD));
+        super(new Properties().food(GOLDEN_RINGO).tab(CreativeModeTab.TAB_FOOD));
     }
 
     @Override
