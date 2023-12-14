@@ -1,6 +1,6 @@
 package io.github.asankilp.dys.item;
 
-import io.github.asankilp.dys.sound.SoundReg;
+import io.github.asankilp.dys.sound.DysSounds;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -15,7 +15,7 @@ public class Yaju extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level levelIn, Player playerIn, InteractionHand handIn) {
         if (levelIn.isClientSide) {
-            levelIn.playSound(playerIn, playerIn.getX(), playerIn.getY(), playerIn.getZ(), SoundReg.yajuSound.get(), playerIn.getSoundSource(), 10F, 1F);
+            levelIn.playSound(playerIn, playerIn.getX(), playerIn.getY(), playerIn.getZ(), DysSounds.YAJU_SOUND, playerIn.getSoundSource(), 10F, 1F);
         }
         return super.use(levelIn, playerIn, handIn);
         }

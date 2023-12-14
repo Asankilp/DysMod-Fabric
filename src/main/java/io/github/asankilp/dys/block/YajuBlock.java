@@ -1,4 +1,4 @@
-package io.github.asankilp.dys.item;
+package io.github.asankilp.dys.block;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Material;
