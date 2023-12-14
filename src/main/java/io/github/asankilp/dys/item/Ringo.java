@@ -20,7 +20,7 @@ public class Ringo extends Item {
             .build();
 
     public Ringo() {
-        super(new Properties().food(RINGO).tab(CreativeModeTab.TAB_FOOD));
+        super(new Properties().food(RINGO));
     }
     @Override
     public ItemStack finishUsingItem(ItemStack itemIn, Level levelIn, LivingEntity entityIn) {

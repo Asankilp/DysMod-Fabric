@@ -2,7 +2,7 @@ package io.github.asankilp.dys.effect;
 
 import io.github.asankilp.dys.Dys;
 import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 
@@ -13,6 +13,6 @@ public class DysEffects {
     public static MobEffect SENPAI_STARE;
 
     public static void register() {
-        SENPAI_STARE = BuiltinRegistries.register(Registry.MOB_EFFECT, new ResourceLocation(Dys.MODID, "senpai_stare"), new SenpaiEffect()).value();
+        SENPAI_STARE = Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(Dys.MODID, "senpai_stare"), new SenpaiEffect());
     }
 }

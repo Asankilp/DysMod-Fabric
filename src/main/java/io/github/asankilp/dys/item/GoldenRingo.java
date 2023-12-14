@@ -3,6 +3,7 @@ package io.github.asankilp.dys.item;
 import io.github.asankilp.dys.effect.DysEffects;
 import io.github.asankilp.dys.sound.DysSounds;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.SpawnUtil;
@@ -13,10 +14,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
@@ -32,7 +30,7 @@ public class GoldenRingo extends Item {
             .build();
 
     public GoldenRingo() {
-        super(new Properties().food(GOLDEN_RINGO).tab(CreativeModeTab.TAB_FOOD));
+        super(new Properties().food(GOLDEN_RINGO));
     }
 
     @Override

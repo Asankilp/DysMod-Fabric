@@ -1,9 +1,10 @@
 package io.github.asankilp.dys.item;
 
 
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageSources;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,7 +19,7 @@ import java.util.List;
 public class KurumiShovel extends ShovelItem {
 
     public KurumiShovel() {
-        super(Tiers.IRON, 6, -3f, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS));
+        super(Tiers.IRON, 6, -3f, (new Item.Properties()));
     }
     /*
      * This method refer to the Botania Mod.
@@ -31,13 +32,14 @@ public class KurumiShovel extends ShovelItem {
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (target.getMobType() == new MobType().UNDEAD) {
-            attacker.level.playSound(null, attacker.getX(), attacker.getY(), attacker.getZ(), SoundEvents.ITEM_BREAK, attacker.getSoundSource(), 1F, 0.5F);
+            attacker.level().playSound(null, attacker.getX(), attacker.getY(), attacker.getZ(), SoundEvents.ITEM_BREAK, attacker.getSoundSource(), 1F, 0.5F);
             target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 30, 10, true, true));
 //            target.addPotionEffect(new EffectInstance(Effects.INSTANT_HEALTH, 1,4));
             if (attacker instanceof Player) {
-                target.hurt(DamageSource.playerAttack((Player) attacker), getAttackDamage() * 5);
+                target.hurt(new DamageSources(RegistryAccess.EMPTY).playerAttack((Player) attacker), 1145);
             } else {
-                target.hurt(DamageSource.mobAttack(attacker), getAttackDamage() * 5);
+                target.hurt(new DamageSources(RegistryAccess.EMPTY).mobAttack(attacker), 1145);
+
             }
 
         }

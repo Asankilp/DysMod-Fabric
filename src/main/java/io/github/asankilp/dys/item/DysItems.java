@@ -3,7 +3,7 @@ package io.github.asankilp.dys.item;
 import io.github.asankilp.dys.Dys;
 import io.github.asankilp.dys.block.DysBlocks;
 import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -33,12 +33,12 @@ public class DysItems {
     public static Item AKAZA_AKARI;
 
     public static void register() {
-        YAJU = BuiltinRegistries.register(Registry.ITEM, new ResourceLocation(Dys.MODID, "yaju"),new Yaju()).value();
-        YAJU_BLOCK_ITEM = BuiltinRegistries.register(Registry.ITEM, new ResourceLocation(Dys.MODID, "yaju_block"), new BlockItem(DysBlocks.YAJU_BLOCK, new Item.Properties())).value();
-        RINGO = BuiltinRegistries.register(Registry.ITEM, new ResourceLocation(Dys.MODID, "ringo"), new Ringo()).value();
-        GOLDEN_RINGO = BuiltinRegistries.register(Registry.ITEM, new ResourceLocation(Dys.MODID, "golden_ringo"), new GoldenRingo()).value();
-        DEAD_IRON = BuiltinRegistries.register(Registry.ITEM, new ResourceLocation(Dys.MODID, "dead_iron"), new DeadIron()).value();
-        KURUMI_SHOVEL = BuiltinRegistries.register(Registry.ITEM, new ResourceLocation(Dys.MODID, "kurumi_shovel"), new KurumiShovel()).value();
-        AKAZA_AKARI = BuiltinRegistries.register(Registry.ITEM, new ResourceLocation(Dys.MODID, "akaza_akari"), new AkazaAkari()).value();
+        YAJU = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "yaju"),new Yaju());
+        YAJU_BLOCK_ITEM = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "yaju_block"), new BlockItem(DysBlocks.YAJU_BLOCK, new Item.Properties()));
+        RINGO = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "ringo"), new Ringo());
+        GOLDEN_RINGO = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "golden_ringo"), new GoldenRingo());
+        DEAD_IRON = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "dead_iron"), new DeadIron());
+        KURUMI_SHOVEL = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "kurumi_shovel"), new KurumiShovel());
+        AKAZA_AKARI = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "akaza_akari"), new AkazaAkari());
     }
 }

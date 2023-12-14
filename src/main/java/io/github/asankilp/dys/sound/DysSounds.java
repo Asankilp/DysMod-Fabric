@@ -2,7 +2,7 @@ package io.github.asankilp.dys.sound;
 
 import io.github.asankilp.dys.Dys;
 import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 
@@ -32,13 +32,13 @@ public class DysSounds {
     public static SoundEvent DEDEDON_SOUND;
 
     public static void register() {
-        YAJU_SOUND = BuiltinRegistries.register(Registry.SOUND_EVENT,new ResourceLocation(Dys.MODID, "ambient.yaju.shout"), new SoundEvent(new ResourceLocation(Dys.MODID, "ambient.yaju.shout"))).value();
-        YAJU_BLOCK_PLACE_SOUND = BuiltinRegistries.register(Registry.SOUND_EVENT, new ResourceLocation(Dys.MODID, "block.yaju_block.place"), new SoundEvent(new ResourceLocation(Dys.MODID, "block.yaju_block.place"))).value();
-        TOKUGAWA_SHOUT_SOUND = BuiltinRegistries.register(Registry.SOUND_EVENT,new ResourceLocation(Dys.MODID, "ambient.tokugawa.shout"), new SoundEvent(new ResourceLocation(Dys.MODID, "ambient.tokugawa.shout"))).value();
-        YAJU_YARIMASU_SOUND = BuiltinRegistries.register(Registry.SOUND_EVENT,new ResourceLocation(Dys.MODID, "ambient.yaju.yarimasu"), new SoundEvent(new ResourceLocation(Dys.MODID, "ambient.yaju.yarimasu"))).value();
-        AKARI_AKARIN_SOUND = BuiltinRegistries.register(Registry.SOUND_EVENT,new ResourceLocation(Dys.MODID, "ambient.akaza_akari.akarin"), new SoundEvent(new ResourceLocation(Dys.MODID, "ambient.akaza_akari.akarin"))).value();
-        GABA_GOLD_SOUND = BuiltinRegistries.register(Registry.SOUND_EVENT,new ResourceLocation(Dys.MODID, "ambient.gaba.gold"), new SoundEvent(new ResourceLocation(Dys.MODID, "ambient.gaba.gold"))).value();
-        DEDEDON_SOUND = BuiltinRegistries.register(Registry.SOUND_EVENT,new ResourceLocation(Dys.MODID, "ambient.dededon"), new SoundEvent(new ResourceLocation(Dys.MODID, "ambient.dededon"))).value();
+        YAJU_SOUND = Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation(Dys.MODID, "ambient.yaju.shout"), SoundEvent.createVariableRangeEvent(new ResourceLocation(Dys.MODID, "ambient.yaju.shout")));
+        YAJU_BLOCK_PLACE_SOUND = Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation(Dys.MODID, "block.yaju_block.place"), SoundEvent.createVariableRangeEvent(new ResourceLocation(Dys.MODID, "block.yaju_block.place")));
+        TOKUGAWA_SHOUT_SOUND = Registry.register(BuiltInRegistries.SOUND_EVENT,new ResourceLocation(Dys.MODID, "ambient.tokugawa.shout"), SoundEvent.createVariableRangeEvent(new ResourceLocation(Dys.MODID, "ambient.tokugawa.shout")));
+        YAJU_YARIMASU_SOUND = Registry.register(BuiltInRegistries.SOUND_EVENT,new ResourceLocation(Dys.MODID, "ambient.yaju.yarimasu"), SoundEvent.createVariableRangeEvent(new ResourceLocation(Dys.MODID, "ambient.yaju.yarimasu")));
+        AKARI_AKARIN_SOUND = Registry.register(BuiltInRegistries.SOUND_EVENT ,new ResourceLocation(Dys.MODID, "ambient.akaza_akari.akarin"), SoundEvent.createVariableRangeEvent(new ResourceLocation(Dys.MODID, "ambient.akaza_akari.akarin")));
+        GABA_GOLD_SOUND = Registry.register(BuiltInRegistries.SOUND_EVENT ,new ResourceLocation(Dys.MODID, "ambient.gaba.gold"), SoundEvent.createVariableRangeEvent(new ResourceLocation(Dys.MODID, "ambient.gaba.gold")));
+        DEDEDON_SOUND = Registry.register(BuiltInRegistries.SOUND_EVENT ,new ResourceLocation(Dys.MODID, "ambient.dededon"), SoundEvent.createVariableRangeEvent(new ResourceLocation(Dys.MODID, "ambient.dededon")));
 
 
 
