@@ -36,9 +36,9 @@ public class KurumiShovel extends ShovelItem {
             target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 30, 10, true, true));
 //            target.addPotionEffect(new EffectInstance(Effects.INSTANT_HEALTH, 1,4));
             if (attacker instanceof Player) {
-                target.hurt(new DamageSources(RegistryAccess.EMPTY).playerAttack((Player) attacker), 1145);
+                target.hurt(attacker.level().damageSources().playerAttack((Player) attacker), getAttackDamage() * 5);
             } else {
-                target.hurt(new DamageSources(RegistryAccess.EMPTY).mobAttack(attacker), 1145);
+                target.hurt(attacker.level().damageSources().mobAttack(attacker), getAttackDamage() * 5);
 
             }
 

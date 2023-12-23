@@ -45,7 +45,6 @@ public class GoldenRingo extends Item {
             if (level == 0) {
                 levelIn.playSound((Player) null, entityIn.getX(), entityIn.getY(), entityIn.getZ(), DysSounds.GABA_GOLD_SOUND, SoundSource.AMBIENT, 0.5f, 1f);
                 entityIn.sendSystemMessage(Component.translatable("msg.golden_ringo.2"));
-
             }
             if (level >= 1) {
                 entityIn.removeEffect(DysEffects.SENPAI_STARE);

@@ -24,6 +24,7 @@ public class DysSounds {
 //    public static final RegistryObject<SoundEvent> DEDEDON_SOUND = SOUNDS.register("ambient.dededon", ()
 //            -> new SoundEvent(new ResourceLocation(Dys.MODID, "ambient.dededon")));
     public static SoundEvent YAJU_SOUND;
+    public static SoundEvent YAJU_SHORT_SHOUT_SOUND;
     public static SoundEvent YAJU_BLOCK_PLACE_SOUND;
     public static SoundEvent TOKUGAWA_SHOUT_SOUND;
     public static SoundEvent YAJU_YARIMASU_SOUND;
@@ -33,6 +34,7 @@ public class DysSounds {
 
     public static void register() {
         YAJU_SOUND = Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation(Dys.MODID, "ambient.yaju.shout"), SoundEvent.createVariableRangeEvent(new ResourceLocation(Dys.MODID, "ambient.yaju.shout")));
+        YAJU_SHORT_SHOUT_SOUND = Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation(Dys.MODID, "ambient.yaju.short_shout"), SoundEvent.createVariableRangeEvent(new ResourceLocation(Dys.MODID, "ambient.yaju.short_shout")));
         YAJU_BLOCK_PLACE_SOUND = Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation(Dys.MODID, "block.yaju_block.place"), SoundEvent.createVariableRangeEvent(new ResourceLocation(Dys.MODID, "block.yaju_block.place")));
         TOKUGAWA_SHOUT_SOUND = Registry.register(BuiltInRegistries.SOUND_EVENT,new ResourceLocation(Dys.MODID, "ambient.tokugawa.shout"), SoundEvent.createVariableRangeEvent(new ResourceLocation(Dys.MODID, "ambient.tokugawa.shout")));
         YAJU_YARIMASU_SOUND = Registry.register(BuiltInRegistries.SOUND_EVENT,new ResourceLocation(Dys.MODID, "ambient.yaju.yarimasu"), SoundEvent.createVariableRangeEvent(new ResourceLocation(Dys.MODID, "ambient.yaju.yarimasu")));
