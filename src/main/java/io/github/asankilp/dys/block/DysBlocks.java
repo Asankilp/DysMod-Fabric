@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Block;
 public class DysBlocks {
     public static Block YAJU_BLOCK;
     public static void register() {
-        YAJU_BLOCK = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Dys.MODID, "yaju_block"), new YajuBlock());
+        YAJU_BLOCK = Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(Dys.MODID, "yaju_block"), new YajuBlock());
 
     }
 }

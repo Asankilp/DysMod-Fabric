@@ -11,10 +11,11 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 
 public class Ringo extends Item {
     private static final FoodProperties RINGO = (new FoodProperties.Builder())
-            .saturationMod(1.2F)
+            .saturationModifier(1.2F)
             .nutrition(4)
             .effect((new MobEffectInstance(MobEffects.CONFUSION, 114, 514, true, false)), 1)
             .build();
@@ -23,7 +24,7 @@ public class Ringo extends Item {
         super(new Properties().food(RINGO));
     }
     @Override
-    public ItemStack finishUsingItem(ItemStack itemIn, Level levelIn, LivingEntity entityIn) {
+    public @NotNull ItemStack finishUsingItem(ItemStack itemIn, Level levelIn, LivingEntity entityIn) {
         levelIn.playSound((Player) null, entityIn.getX(), entityIn.getY(), entityIn.getZ(), DysSounds.TOKUGAWA_SHOUT_SOUND, SoundSource.AMBIENT, 0.5f, 1f);
         return super.finishUsingItem(itemIn, levelIn, entityIn);
     }

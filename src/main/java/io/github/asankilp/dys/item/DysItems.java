@@ -33,12 +33,12 @@ public class DysItems {
     public static Item AKAZA_AKARI;
 
     public static void register() {
-        YAJU = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "yaju"),new Yaju());
-        YAJU_BLOCK_ITEM = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "yaju_block"), new BlockItem(DysBlocks.YAJU_BLOCK, new Item.Properties()));
-        RINGO = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "ringo"), new Ringo());
-        GOLDEN_RINGO = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "golden_ringo"), new GoldenRingo());
-        DEAD_IRON = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "dead_iron"), new DeadIron());
-        KURUMI_SHOVEL = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "kurumi_shovel"), new KurumiShovel());
-        AKAZA_AKARI = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Dys.MODID, "akaza_akari"), new AkazaAkari());
+        YAJU = Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(Dys.MODID, "yaju"),new Yaju());
+        YAJU_BLOCK_ITEM = Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(Dys.MODID, "yaju_block"), new BlockItem(DysBlocks.YAJU_BLOCK, new Item.Properties()));
+        RINGO = Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(Dys.MODID, "ringo"), new Ringo());
+        GOLDEN_RINGO = Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(Dys.MODID, "golden_ringo"), new GoldenRingo());
+        DEAD_IRON = Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(Dys.MODID, "dead_iron"), new DeadIron());
+        KURUMI_SHOVEL = Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(Dys.MODID, "kurumi_shovel"), new KurumiShovel());
+        AKAZA_AKARI = Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(Dys.MODID, "akaza_akari"), new AkazaAkari());
     }
 }

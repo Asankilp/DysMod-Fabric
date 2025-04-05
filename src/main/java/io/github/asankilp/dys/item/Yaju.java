@@ -19,6 +19,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Optional;
 
@@ -27,7 +28,7 @@ public class Yaju extends Item {
         super(new Properties());
     }
     @Override
-    public InteractionResultHolder<ItemStack> use(Level levelIn, Player playerIn, InteractionHand handIn) {
+    public @NotNull InteractionResultHolder<ItemStack> use(Level levelIn, Player playerIn, InteractionHand handIn) {
         if (levelIn instanceof ServerLevel serverLevel) {
             LivingEntity attackTarget = serverLevel.getNearestEntity(Monster.class, TargetingConditions.DEFAULT, playerIn, 10, 10, 10, playerIn.getBoundingBox().inflate(10));
             if (attackTarget != null) {

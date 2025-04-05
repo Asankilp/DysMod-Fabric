@@ -13,6 +13,6 @@ public class DysEffects {
     public static MobEffect SENPAI_STARE;
 
     public static void register() {
-        SENPAI_STARE = Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(Dys.MODID, "senpai_stare"), new SenpaiEffect());
+        SENPAI_STARE = Registry.register(BuiltInRegistries.MOB_EFFECT, ResourceLocation.tryBuild(Dys.MODID, "senpai_stare"), new SenpaiEffect());
     }
 }

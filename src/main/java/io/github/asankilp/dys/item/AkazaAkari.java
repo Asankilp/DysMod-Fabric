@@ -10,6 +10,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 
 public class AkazaAkari extends Item {
     public AkazaAkari() {
@@ -17,7 +18,7 @@ public class AkazaAkari extends Item {
 
     }
     @Override
-    public InteractionResultHolder<ItemStack> use(Level levelIn, Player playerIn, InteractionHand handIn) {
+    public @NotNull InteractionResultHolder<ItemStack> use(Level levelIn, Player playerIn, InteractionHand handIn) {
         ItemStack stack = playerIn.getItemInHand(handIn);
         playerIn.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 140, 4, true, false));
         playerIn.getCooldowns().addCooldown(this, 190);
